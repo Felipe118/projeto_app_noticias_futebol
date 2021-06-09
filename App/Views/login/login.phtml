@@ -1,18 +1,18 @@
        <?php
-        $url = "http://$_SERVER[REQUEST_URI]";
-        $url = str_replace("http:///login?", "", $_SERVER["REQUEST_URI"]);
-        $url = str_replace("/login?", "", $_SERVER["REQUEST_URI"]);
-        if($url == 'login=erro'){
+            $url = "http://$_SERVER[REQUEST_URI]";
+            $url = str_replace("http:///login?", "", $_SERVER["REQUEST_URI"]);
+            $url = str_replace("/login?", "", $_SERVER["REQUEST_URI"]);
+            if($url == 'login=erro'){
         ?>
-       <section class="notification">
+            <section class="notification">
             <p class="text-danger">ERRO: usuário ou senha invalidos!</p>
-        </section>
+             </section>
       
-            <?php } ?>
-    <section id="container-login">
+        <?php } ?>
+        <section id="container-login">
 
-        <img class="logo-login" src="img/logo_galo.svg" alt="Logo Atletico Mineiro">
-        <form  method="POST" action="/autenticar">
+            <img class="logo-login" src="img/logo_galo.svg" alt="Logo Atletico Mineiro">
+            <form  method="POST" action="/autenticar">
             <div id="caixa-form">
                  <label>E-Mail: </label><input type="text" name="email" id="email"><br>
                  <label>Senha:</label>&nbsp;<input type="password" name="senha" id="senha">
@@ -21,5 +21,5 @@
 
            
         </form>
-     </section>
+        </section>
      
