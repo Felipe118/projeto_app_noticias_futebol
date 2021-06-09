@@ -33,14 +33,10 @@
                 header('Location: /home');
                 //echo "<script>alert('Entrou')</script>";
             }else{
-                header('Location: /?login=erro');
+                header('Location: /login?login=erro');
             }
         }
-        public function home(){
-       
- 
-            $this->render_login('home');
-        }
+    
 
     }
 ?>
