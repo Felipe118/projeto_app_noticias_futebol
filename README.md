@@ -27,9 +27,9 @@ site ainda está em desenvolvimento.
 ![image](https://img.shields.io/github/license/Felipe118/projeto_app_noticias_futebol)
 
 ### Telas
-![Index da pagina](img/index_tela.png/)
+![Index da pagina](public/img/index_tela.png/)
 >>------------------------------------
 * Tela de Login:
 
-![Tela de Login](img/tela_login.png/)
+![Tela de Login](/public/img/tela_login.png/)
 
