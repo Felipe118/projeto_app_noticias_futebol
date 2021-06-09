@@ -11,7 +11,7 @@ class Route extends Bootstrap {
 		$routes['home'] = array(
 			'route' => '/',
 			'controller' => 'indexController',
-			'action' => 'index'
+			'action' => 'index' 
 		);
 		$routes['login'] = array(
 			'route' => '/login',
@@ -24,10 +24,10 @@ class Route extends Bootstrap {
 			'action' => 'autenticar'
 		);
 
-		$routes['sobre_nos'] = array(
-			'route' => '/sobre_nos',
-			'controller' => 'indexController',
-			'action' => 'sobreNos'
+		$routes['home'] = array(
+			'route' => '/home',
+			'controller' => 'loginController',
+			'action' => 'home'
 		);
 
 		$this->setRoutes($routes);

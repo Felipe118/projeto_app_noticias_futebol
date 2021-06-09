@@ -9,7 +9,7 @@
  
         public function login(){
        
-
+ 
             $this->render_login('login');
         }
         public function autenticar(){
@@ -30,10 +30,16 @@
                  $_SESSION['id'] = $funcionario->__get('id');
                  $_SESSION['nome'] = $funcionario->__get('nome');
 
-                 header('Location: /home');
-
-
-             }
+                // header('Location: /home');
+                echo "<script>alert('Entrou')</script>";
+            }else{
+                header('Location: /?login=erro');
+            }
+        }
+        public function home(){
+       
+ 
+            $this->render_login('home');
         }
 
     }

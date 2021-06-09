@@ -10,7 +10,7 @@ class Connection {
 			$conn = new \PDO(
 				"mysql:host=localhost;dbname=db_galo;charset=utf8",
 				"root",
-				"201218" 
+				"" 
 			);
 
 			return $conn;
