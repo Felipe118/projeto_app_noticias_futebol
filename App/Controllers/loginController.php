@@ -30,8 +30,8 @@
                  $_SESSION['id'] = $funcionario->__get('id');
                  $_SESSION['nome'] = $funcionario->__get('nome');
 
-                // header('Location: /home');
-                echo "<script>alert('Entrou')</script>";
+                header('Location: /home');
+                //echo "<script>alert('Entrou')</script>";
             }else{
                 header('Location: /?login=erro');
             }

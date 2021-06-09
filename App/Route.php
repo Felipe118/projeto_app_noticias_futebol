@@ -26,7 +26,7 @@ class Route extends Bootstrap {
 
 		$routes['home'] = array(
 			'route' => '/home',
-			'controller' => 'loginController',
+			'controller' => 'homeController',
 			'action' => 'home'
 		);
 

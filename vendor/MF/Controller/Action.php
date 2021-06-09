@@ -30,6 +30,15 @@ abstract class Action {
 			$this->content();
 		}
 	}
+	protected function renderHome($view, $layout = 'layout_home') {
+		$this->view->page = $view; 
+
+		if(file_exists("../App/Views/".$layout.".phtml")) {
+			require_once "../App/Views/".$layout.".phtml";
+		} else {
+			$this->content();
+		}
+	}
 
 
 	protected function content() {
