@@ -29,12 +29,17 @@
 
                  $_SESSION['id'] = $funcionario->__get('id');
                  $_SESSION['nome'] = $funcionario->__get('nome');
-
+                 $_SESSION['autenticado'] = true;
+                
                 header('Location: /home');
-                //echo "<script>alert('Entrou')</script>";
+             
             }else{
+               
                 header('Location: /login?login=erro');
             }
+
+             
+             
         }
 
         public function sair(){

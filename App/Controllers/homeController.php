@@ -7,6 +7,12 @@
 
    class homeController extends Action{
     public function home(){
+
+        session_start();
+
+        if($_SESSION['autenticado'] == false){
+          header('Location: /');
+        }
         $this->renderHome('home');
     }
 }
