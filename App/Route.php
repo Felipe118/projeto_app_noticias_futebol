@@ -31,7 +31,7 @@ class Route extends Bootstrap {
 		);
 		$routes['sair'] = array(
 			'route' => '/sair',
-			'controller' => 'sairController',
+			'controller' => 'loginController',
 			'action' => 'sair'
 		);
 

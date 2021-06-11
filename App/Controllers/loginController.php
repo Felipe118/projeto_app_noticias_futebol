@@ -11,7 +11,7 @@
        
  
             $this->render_login('login');
-        }
+        } 
         public function autenticar(){
 
             $funcionario = Container::getModel('Funcionario');
@@ -35,6 +35,12 @@
             }else{
                 header('Location: /login?login=erro');
             }
+        }
+
+        public function sair(){
+            session_start();
+            session_destroy();
+            header('Location: /');
         }
     
 
