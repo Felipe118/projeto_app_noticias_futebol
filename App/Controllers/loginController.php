@@ -12,16 +12,14 @@
  
             $this->render_login('login');
         } 
-        public function autenticar(){
+        public function autenticar(){ 
 
             $funcionario = Container::getModel('Funcionario');
-             //echo "<pre>";
-             //print_r($_POST);
-             //echo "<pre>";
+             
 
              $funcionario->__set('email',$_POST['email']);
              $funcionario->__set('senha',$_POST['senha']);
-             $funcionario->autenticar();
+             $funcionario->autenticar(); 
 
              if($funcionario->__get('id') !='' && $funcionario->__get('nome') != ''){
                  echo "Autenticado";
@@ -33,7 +31,9 @@
                 
                 header('Location: /home');
              
-            }else{
+            }
+            
+            else{
                
                 header('Location: /login?login=erro');
             }

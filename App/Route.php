@@ -6,7 +6,7 @@ use MF\Init\Bootstrap;
 
 class Route extends Bootstrap {
 
-	protected function initRoutes() {
+	protected function initRoutes() { 
 
 		$routes['index'] = array(
 			'route' => '/',
@@ -20,7 +20,7 @@ class Route extends Bootstrap {
 		);
 		$routes['autenticar'] = array(
 			'route' => '/autenticar',
-			'controller' => 'loginController',
+			'controller' => 'loginControll er',
 			'action' => 'autenticar'
 		);
 
@@ -29,11 +29,17 @@ class Route extends Bootstrap {
 			'controller' => 'homeController',
 			'action' => 'home'
 		);
+		$routes['home_adm'] = array(
+			'route' => '/home_adm',
+			'controller' => 'homeController',
+			'action' => 'home_adm'
+		);
 		$routes['sair'] = array(
 			'route' => '/sair',
 			'controller' => 'loginController',
 			'action' => 'sair'
 		);
+		
 
 		$this->setRoutes($routes);
 	}

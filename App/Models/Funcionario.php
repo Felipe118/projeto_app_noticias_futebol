@@ -26,9 +26,7 @@ namespace App\Models;
 
              $funcionario = $stmt->fetch(\PDO::FETCH_ASSOC);
 
-             //echo "<pre>";
-             //print_r($funcionario);
-             //echo "</pre>";
+             
 
              if($funcionario['id'] != '' && $funcionario['nome'] != ''){
                 $this->__set('id', $funcionario['id']);
