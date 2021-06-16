@@ -3,10 +3,10 @@
 
  ## Sobre
  * Esse App desenvolvido em PHP, utilizando um miniframework MVC, para facilitar o desenvolvimento
-site ainda está em desenvolvimento.
+site, que ainda está em desenvolvimento.
 
 ### Desenvolvimento
-* O site será desenvolvido para fins estudantis utilizar todas as práticas que aprendi em prática.
+* O site será desenvolvido para fins estudantis.
  
  ## Features
 - [x]  Front-end
