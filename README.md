@@ -1,4 +1,4 @@
-# APP de notícias de um clube
+# Sistema de notícias de um clube de futebol :soccer:
  * Nesse Sistema, será postados notícias do clube podendo ser gerenciado as postagens e gerenciamento de usuários do sistema.
 
  ## Sobre
