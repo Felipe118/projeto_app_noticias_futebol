@@ -21,18 +21,29 @@
              $funcionario->__set('senha',$_POST['senha']);
              $funcionario->autenticar(); 
 
-             if($funcionario->__get('id') !='' && $funcionario->__get('nome') != ''){
+             if($funcionario->__get('id') !='' && $funcionario->__get('nome') != '' && $funcionario->__get('permissao') == "usu"){
                  echo "Autenticado";
                  session_start();
 
                  $_SESSION['id'] = $funcionario->__get('id');
                  $_SESSION['nome'] = $funcionario->__get('nome');
+                 $_SESSION['permissao'] = $funcionario->__get('permissao');
                  $_SESSION['autenticado'] = true;
                 
                 header('Location: /home');
              
             }
-            
+            else if($funcionario->__get('id') !='' && $funcionario->__get('nome') != ''  && $funcionario->__get('permissao') == "adm"){
+              
+                session_start();
+
+                 $_SESSION['id'] = $funcionario->__get('id');
+                 $_SESSION['nome'] = $funcionario->__get('nome');
+                 $_SESSION['permissao'] = $funcionario->__get('permissao');
+                 $_SESSION['autenticado'] = true;
+                
+                header('Location: /home_adm');
+           }
             else{
                
                 header('Location: /login?login=erro');
