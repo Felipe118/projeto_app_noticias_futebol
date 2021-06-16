@@ -5,8 +5,8 @@
  * Esse App desenvolvido em PHP, utilizando um miniframework MVC, para facilitar o desenvolvimento
 site, que ainda está em desenvolvimento.
 
-### :construction: Desenvolvimento
-* Atualmente o sistema está em desenvolvimento.
+###  Desenvolvimento 
+*  Atualmente o sistema está em desenvolvimento :construction: .
  
  ## Features
 - [x]  Front-end
