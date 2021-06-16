@@ -1,12 +1,12 @@
 # APP de notícias de um clube
- * Nesse App, será possivel criar seu login para postar notícias sobre o time  nesse App.
+ * Nesse Sistema, será postados notícias do clube podendo ser gerenciado as postagens e gerenciamento de usuários do sistema.
 
  ## Sobre
  * Esse App desenvolvido em PHP, utilizando um miniframework MVC, para facilitar o desenvolvimento
 site, que ainda está em desenvolvimento.
 
-### Desenvolvimento
-* O site será desenvolvido para fins estudantis.
+### :construction: Desenvolvimento
+* Atualmente o sistema está em desenvolvimento.
  
  ## Features
 - [x]  Front-end
