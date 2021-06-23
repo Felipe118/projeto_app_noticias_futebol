@@ -21,18 +21,6 @@ class IndexController extends Action {
 	}
 
 	
-	//public function sobreNos() {
 
-		//$info = Container::getModel('Info');
-
-		//$informacoes = $info->getInfo();
-		
-		//@$this->view->dados = $informacoes;
-
-		//$this->render('sobreNos', 'layout1');
-	//}
 
 }
-
-
-?>
