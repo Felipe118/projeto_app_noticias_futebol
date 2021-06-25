@@ -18,11 +18,14 @@
     public function home_adm(){
 
       session_start();
-
+ 
       if($_SESSION['autenticado'] == false){
         header('Location: /');
       }
       $this->renderHome('home_adm');
   }
+
+
+
 }
 ?>

@@ -29,7 +29,7 @@ namespace App\Models;
              $funcionario = $stmt->fetch(\PDO::FETCH_ASSOC);
 
              
-
+ 
              if($funcionario['id'] != '' && $funcionario['nome'] != '' && $funcionario['permissao'] != ''){
                 $this->__set('id', $funcionario['id']);
                  $this->__set('nome', $funcionario['nome']);
