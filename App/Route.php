@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace App;
@@ -11,17 +10,17 @@ class Route extends Bootstrap {
 
 		$routes['index'] = array(
 			'route' => '/',
-			'controller' => 'indexController',
+			'controller' => 'IndexController',
 			'action' => 'index' 
 		);
 		$routes['login'] = array(
 			'route' => '/login',
-			'controller' => 'loginController',
+			'controller' => 'LoginController',
 			'action' => 'login'
 		);
 		$routes['autenticar'] = array(
 			'route' => '/autenticar',
-			'controller' => 'loginController',
+			'controller' => 'LoginController',
 			'action' => 'autenticar'
 		);
 
@@ -32,67 +31,18 @@ class Route extends Bootstrap {
 		);
 		$routes['home_adm'] = array(
 			'route' => '/home_adm',
-			'controller' => 'homeController',
+			'controller' => 'HomeController',
 			'action' => 'home_adm'
 		);
 		$routes['sair'] = array(
 			'route' => '/sair',
-			'controller' => 'loginController',
-			'action' => 'sair'
-		);
-		
-
-		$this->setRoutes($routes);
-	}
-
-}
-
-=======
-<?php
-
-namespace App;
- 
-use MF\Init\Bootstrap;
-
-class Route extends Bootstrap {
-
-	protected function initRoutes() { 
-
-		$routes['index'] = array(
-			'route' => '/',
-			'controller' => 'indexController',
-			'action' => 'index' 
-		);
-		$routes['login'] = array(
-			'route' => '/login',
-			'controller' => 'loginController',
-			'action' => 'login'
-		);
-		$routes['autenticar'] = array(
-			'route' => '/autenticar',
-			'controller' => 'loginController',
-			'action' => 'autenticar'
-		);
-
-		$routes['home'] = array(
-			'route' => '/home',
-			'controller' => 'homeController',
-			'action' => 'home'
-		);
-		$routes['home_adm'] = array(
-			'route' => '/home_adm',
-			'controller' => 'homeController',
-			'action' => 'home_adm'
-		);
-		$routes['sair'] = array(
-			'route' => '/sair',
-			'controller' => 'loginController',
+			'controller' => 'LoginController',
 			'action' => 'sair'
 		);
 		$routes['cadastrar'] = array(
-			'route' => '/cadastrar_noticias',
-			'controller' => 'noticiasController',
-			'action' => 'insert'
+			'route' => '/cadastra_noticias',
+			'controller' => 'NoticiasController',
+			'action' => 'cadastra_noticias'
 		);
 		
 		
@@ -102,5 +52,5 @@ class Route extends Bootstrap {
 
 }
 
->>>>>>> e162ad5c20c160202d27bbd980f667c0f5adf1e1
+
 ?>
