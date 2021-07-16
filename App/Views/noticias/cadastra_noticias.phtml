@@ -17,18 +17,35 @@
         <a href="/sair" class="btn-entrar"> Sair</a>
     </header>
 
-    <section class="container-fluid  marcador ">
+    <section class="container-fluid ">
         <div class="row">
-            <div class="d-flex col-12 justify-content-center">
-                <h1>Cadastro de notícias</h1>
-
-                <form action="">
-                    <div class="mb-3 row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Titulo da notícia</label>
+            <div class="d-flex justify-content-left marcador">
+               <form action="" method="POST" class="marcador col-12">
+                <h1 class="texto d-flex justify-content-center">Cadastrar notícias</h1><br>
+                    <div class="mb-4 row col-6 mt-5 form-1">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Titulo</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputPassword">
                         </div>
                     </div>
+                    <div class="mb-4 row col-6 mt-2 form-2">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Resumo</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPassword">
+                        </div>
+                    </div>
+                    <div class="mb-4 row col-6 mt-2 form-2">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Caminho imagem</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+
+
                 </form>
             </div>
         </div>
