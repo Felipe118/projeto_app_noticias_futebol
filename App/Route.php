@@ -44,8 +44,13 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'cadastra_noticias'
 		);
+		$routes['cadastrarNoticia'] = array(
+			'route' => '/cadastrar',
+			'controller' => 'NoticiasController',
+			'action' => 'cadastra'
+		);
 		
-		
+		 
 
 		$this->setRoutes($routes);
 	}

@@ -10,4 +10,12 @@
     public function cadastra_noticias(){
         $this->renderNoticias('cadastra_noticias');
     }
+    public function cadastrar(){
+
+        Container::getModel('Noticia');
+
+
+
+        $this->renderNoticias('cadastra_noticias');
+    }
 }

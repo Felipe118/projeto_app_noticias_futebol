@@ -6,8 +6,11 @@
 site, que ainda está em desenvolvimento.
 
 ###  Desenvolvimento 
-*  Atualmente o sistema está em desenvolvimento :construction: .
- 
+*  Atualmente o sistema está em desenvolvimento.
+ #### Status
+ <h4 align="center"> 
+	🚧  ... Galo Notícias 🚀 Em construção...  🚧
+</h4>
  ## Features
 - [x]  Front-end
 - [x]  Sistema de Login
