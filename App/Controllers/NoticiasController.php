@@ -14,6 +14,7 @@
 
         Container::getModel('Noticia');
 
+       
 
 
         $this->renderNoticias('cadastra_noticias');
