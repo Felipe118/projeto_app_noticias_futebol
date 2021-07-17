@@ -139,7 +139,10 @@ nav{
 .marcador{
     border: 1px solid red;
 }
-
+#forms{
+    border: 1px solid green;
+    padding-left: 80px;
+}
 /* FIM DA SEÇÂO CADASTRAR NOTICIAS*/
 
 /*INICIO CSS FOOTER*/
