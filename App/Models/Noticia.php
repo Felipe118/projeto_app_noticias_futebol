@@ -22,7 +22,7 @@
 
         public function cadastrar(){
 
-            try{
+         
 
             $query = "INSERT INTO tb_noticias(titulo,resumo,texto,imagem,autor,fk_id_funcionario) values(:titlo , :resumo, :texto, :imagem, :autor, :fk_id_funcionario)";
 
@@ -34,22 +34,27 @@
             $stmt->bindValue(':autor', $this->__get('autor'));
             $stmt->bindValue(':fk_id_funcionario',$this->__get('fk_id_funcionario'));
        
-           if($stmt->execute()){
-           
-                return $this;
+           $stmt->execute();
 
+           return $this;
            
-           }else{
-               return  "<script>alert('Não Passou')</script>";
+          
+           
+         
+              
            }
-        }catch(\PDOException $e){
-            return 'Error: '.$e->getMessage();
+        
+        
+        
         }
+        
+           
+     
 
            
 
-        }
-    }
+        
+    
 
 
 

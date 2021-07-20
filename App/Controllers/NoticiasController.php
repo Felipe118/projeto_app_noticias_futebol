@@ -16,9 +16,10 @@
         $this->renderNoticias('cadastra_noticias');
     } 
     
-    public function cadastrar(){
+    public function cadastrarNoticias(){
 
        // $this->validaAutenticacao();
+       session_start();
       
      
 
@@ -39,7 +40,8 @@
         
 
 
-        $this->renderNoticias('cadastra_noticias');
+       // $this->renderNoticias('cadastra_noticias');
+      header('Location:/home_adm');
     }
 
     public function validaAutenticacao() {
