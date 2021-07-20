@@ -8,21 +8,31 @@
 
    class NoticiasController extends Action{
     public function cadastra_noticias(){
+        session_start();
+
+        if($_SESSION['autenticado'] == false){
+          header('Location: /'); 
+        }
         $this->renderNoticias('cadastra_noticias');
-    }
+    } 
+    
     public function cadastrar(){
-        $funcionario = Container::getModel('Funcionario');
+
+       // $this->validaAutenticacao();
+      
+     
 
         $noticias = Container::getModel('Noticia');
+     
+       $noticias->__set('titulo', $_POST['titulo']);
+       $noticias->__set('resumo', $_POST['resumo']);
+       $noticias->__set('texto', $_POST['texto']);
+        $noticias->__set('imagem', $_POST['imagem']);
+       $noticias->__set('autor', $_POST['autor']);
+      
+        $noticias->__set('fk_id_funcionario', $_SESSION['id']);
 
-        $noticias->__set('titulo',$_POST['titulo']);
-        $noticias->__set('resumo',$_POST['resumo']);
-        $noticias->__set('texto',$_POST['texto']);
-        $noticias->__set('imagem',$_POST['imagem']);
-        $noticias->__set('autor',$_POST['autor']);
-        session_start();
-        $idFuncionario = $_SESSION['id'] = $funcionario->__get('id');
-        $noticias->__set('fk_id_funcionario', $idFuncionario);
+        
 
         $noticias->cadastrar();
 
@@ -31,4 +41,16 @@
 
         $this->renderNoticias('cadastra_noticias');
     }
+
+    public function validaAutenticacao() {
+
+		session_start();
+
+		//if($_SESSION['id'] == '' && $_SESSION['nome'] == '') {
+			//header('Location: /?login=erro2');
+		//}	
+
+       
+	}
+
 }
