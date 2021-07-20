@@ -11,10 +11,22 @@
         $this->renderNoticias('cadastra_noticias');
     }
     public function cadastrar(){
+        $funcionario = Container::getModel('Funcionario');
 
-        Container::getModel('Noticia');
+        $noticias = Container::getModel('Noticia');
 
-       
+        $noticias->__set('titulo',$_POST['titulo']);
+        $noticias->__set('resumo',$_POST['resumo']);
+        $noticias->__set('texto',$_POST['texto']);
+        $noticias->__set('imagem',$_POST['imagem']);
+        $noticias->__set('autor',$_POST['autor']);
+        session_start();
+        $idFuncionario = $_SESSION['id'] = $funcionario->__get('id');
+        $noticias->__set('fk_id_funcionario', $idFuncionario);
+
+        $noticias->cadastrar();
+
+        
 
 
         $this->renderNoticias('cadastra_noticias');

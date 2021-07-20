@@ -18,7 +18,7 @@ class Connection {
 		} catch (\PDOException $e) {
 			echo "ERRO BD : ".$e;
 		}
-	}
+	} 
 }
 
 

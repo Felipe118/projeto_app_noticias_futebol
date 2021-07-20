@@ -21,6 +21,19 @@
         }
 
         public function cadastrar(){
+            $query = "INSERT INTO tb_noticias(titulo,resumo,texto,imagem,autor,fk_id_funcionario) values (:titlo ,:resumo,:texto,:imagem,:autor,:fk_id_funcionario);";
+
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':titulo',$this->__get('titulo'));
+            $stmt->bindValue(':resumo',$this->__get('resumo'));
+            $stmt->bindValue(':texto',$this->__get('texto'));
+            $stmt->bindValue(':imagem',$this->__get('imagem'));
+            $stmt->bindValue(':autor',$this->__get('autor'));
+            $stmt->bindValue(':fk_id_funcionario',$this->__get('idFuncionario'));
+
+            $stmt->execute();
+
+            return $this;
 
         }
     }
