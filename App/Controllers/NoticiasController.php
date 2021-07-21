@@ -1,11 +1,13 @@
 <?php 
    
+
    namespace App\Controllers;
+   
 
    //os recursos do miniframework
    use MF\Controller\Action;
    use MF\Model\Container;
-
+  
    class NoticiasController extends Action{
     public function cadastra_noticias(){
         session_start();
@@ -15,44 +17,50 @@
         }
         $this->renderNoticias('cadastra_noticias');
     } 
-    
-    public function cadastrarNoticias(){
+     
+    public function cadastrarNoticia(){
 
-       // $this->validaAutenticacao();
-       session_start();
       
      
+
+     
+      
+      
 
         $noticias = Container::getModel('Noticia');
-     
-       $noticias->__set('titulo', $_POST['titulo']);
-       $noticias->__set('resumo', $_POST['resumo']);
-       $noticias->__set('texto', $_POST['texto']);
-        $noticias->__set('imagem', $_POST['imagem']);
-       $noticias->__set('autor', $_POST['autor']);
-      
-        $noticias->__set('fk_id_funcionario', $_SESSION['id']);
 
         
+       $noticias->__set('titulo', $_POST["titulo"]);
+       $noticias->__set('resumo', $_POST["resumo"]);
+       $noticias->__set('texto', $_POST["texto"]);
+       $noticias->__set('imagem', $_POST["imagem"]);
+       $noticias->__set('autor', $_POST["autor"]);
+       //$noticias->__set('fk_id_funcionario', (integer)$_SESSION['id'] );
 
         $noticias->cadastrar();
+          $this->renderNoticias('cadastra_noticias');
+      
+}
+    public function teste(){
+      session_start();
+      try{
 
-        
 
-
-       // $this->renderNoticias('cadastra_noticias');
-      header('Location:/home_adm');
-    }
-
-    public function validaAutenticacao() {
-
-		session_start();
-
-		//if($_SESSION['id'] == '' && $_SESSION['nome'] == '') {
-			//header('Location: /?login=erro2');
-		//}	
-
+     
+      $teste = Container::getModel('Teste');
+    
+       // $_POST['id'] = $_SESSION['id'];
        
-	}
+      $teste->__set('id', (integer)$_SESSION['id']);
+      var_dump($_SESSION['id']);
+    
+      $teste->__set('titulo', $_POST["titulo"]);
 
+      if($teste->teste()){
+        $this->renderNoticias('cadastra_noticias');
+      }
+      }catch(\PDOException $e){
+        echo 'ERRO'.$e->getMessage();
+      }
+    }
 }

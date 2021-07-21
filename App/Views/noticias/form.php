@@ -1,27 +1,5 @@
-<section class="container-fluid col-12">
-    <header id="header">
-        <a href="#">
-            <img class="logo" src="../img/logo_galo.svg" alt="Logo Atletico Mineiro">
-        </a>
-        <nav id="navigation">
-            <ul>
 
-                <li><a href="#">História</a></li>
-                <li><a href="#">Jogadores</a></li>
-                <li><a href="#">Titulos</a></li>
-                <li><a href="#">Destaques</a></li>
-
-            </ul>
-
-        </nav>
-        <a href="/sair" class="btn-entrar"> Sair</a>
-    </header>
-
-    <section class="container-fluid ">
-        <div class="row">
-            <div class="d-flex justify-content-center ">
-
-            <form method="POST" action="/cadastrarNoticia" class="col-12 ">
+                <form method="POST" action="/cadastrarNoticia" class="col-12 ">
                     <h1 class="texto d-flex justify-content-center">Cadastrar notícias</h1><br>
                     <div id="forms" class="col-12 ">
                         <div class="mb-4 row col-6 mt-5 form-1">
@@ -56,14 +34,3 @@
                         <button class="btn btn-warning btn-lg botao">Cadastrar</button>
                     </div>
                  </form>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-
-    <footer id="footer" class="mt-3 col-12">
-        <p class="text-footer"> &copy LOREM IPSUN DOLOR SIT AMET</p>
-    </footer>
-</section>

@@ -10,21 +10,21 @@
         private $texto;
         private $imagem;
         private $autor;
-        private $fk_id_funcionario;
-
+        //private $fk_id_funcionario;
  
+  
         public function __get($attr){
             return $this->$attr;
         }
         public function __set($attr,$value){
             $this->$attr = $value;
-        }
+        } 
 
         public function cadastrar(){
 
          
 
-            $query = "INSERT INTO tb_noticias(titulo,resumo,texto,imagem,autor,fk_id_funcionario) values(:titlo , :resumo, :texto, :imagem, :autor, :fk_id_funcionario)";
+            $query = "INSERT INTO tb_teste_noticias(titulo,resumo,texto,imagem,autor) values(:titulo ,:resumo,:texto,:imagem,:autor);";
 
             $stmt = $this->db->prepare($query);
             $stmt->bindValue(':titulo', $this->__get('titulo'));
@@ -32,7 +32,7 @@
             $stmt->bindValue(':texto', $this->__get('texto'));
             $stmt->bindValue(':imagem', $this->__get('imagem'));
             $stmt->bindValue(':autor', $this->__get('autor'));
-            $stmt->bindValue(':fk_id_funcionario',$this->__get('fk_id_funcionario'));
+            //$stmt->bindValue(':fk_id_funcionario',$this->__get('fk_id_funcionario'),\PDO::PARAM_INT);
        
            $stmt->execute();
 
@@ -43,6 +43,8 @@
          
               
            }
+
+          
         
         
         

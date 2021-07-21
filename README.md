@@ -16,7 +16,8 @@ site, que ainda está em desenvolvimento.
 - [x]  Sistema de Login
 - [x]  integrar ao banco de dados
 - [ ]  Controle de Jornalistas
-- [ ]  Cadastrar,Alterar,Deletar Notícias
+- [ ]  Responsividade
+- [ ]  Cadastrar,Alterar,Desativar Notícias
 
 
 ## Tecnologias

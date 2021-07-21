@@ -28,7 +28,7 @@ class Route extends Bootstrap {
 			'route' => '/home',
 			'controller' => 'homeController',
 			'action' => 'home'
-		);
+		); 
 		$routes['home_adm'] = array(
 			'route' => '/home_adm',
 			'controller' => 'HomeController',
@@ -47,7 +47,12 @@ class Route extends Bootstrap {
 		$routes['cadastrarNoticia'] = array(
 			'route' => '/cadastrarNoticia',
 			'controller' => 'NoticiasController',
-			'action' => 'cadastrarNoticias'
+			'action' => 'cadastrarNoticia'
+		);
+		$routes['teste'] = array(
+			'route' => '/teste',
+			'controller' => 'NoticiasController',
+			'action' => 'teste'
 		);
 		
 		 
