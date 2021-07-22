@@ -34,6 +34,10 @@
        
            $stmt->execute();
 
+            $stmt->rowCount();
+           
+         
+
            return $this;
         
         }

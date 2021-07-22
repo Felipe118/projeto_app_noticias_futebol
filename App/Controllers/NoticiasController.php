@@ -30,9 +30,12 @@
        $noticias->__set('texto', $_POST["texto"]);
        $noticias->__set('imagem', $_POST["imagem"]);
        $noticias->__set('autor', $_POST["autor"]);
-       $noticias->__set('fk_id_funcionario', $_SESSION['id'] );
+       //$noticias->__set('fk_id_funcionario', $_SESSION['id'] );
        
-        $noticias->cadastrar();
+         $noticias->cadastrar();
+
+
+        
         $this->renderNoticias('cadastra_noticias');
       
 } 
