@@ -4,7 +4,7 @@
 
     use MF\Model\Model;
 
-    class Funcionario extends Model{
+    class Funcionario extends Model{ 
 
         private $id;
         private $email;

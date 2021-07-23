@@ -47,7 +47,7 @@ abstract class Action {
 		} else {
 			$this->content();
 		}
-	}
+	} 
 	
 	
 

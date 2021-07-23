@@ -4,7 +4,7 @@ namespace App;
 
 class Connection {
 
-	public static function getDb() {
+	public static function getDb() { 
 		try {
 
 			$conn = new \PDO(

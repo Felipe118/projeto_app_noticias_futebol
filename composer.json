@@ -1,5 +1,5 @@
 {
-	"name":"galo_noticias",
+	
 	"require": {
 		"php": ">= 7.0"
 	},

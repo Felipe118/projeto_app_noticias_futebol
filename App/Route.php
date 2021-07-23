@@ -5,7 +5,7 @@ namespace App;
 use MF\Init\Bootstrap;
 
 class Route extends Bootstrap {
-
+ 
 	protected function initRoutes() { 
 
 		$routes['index'] = array(

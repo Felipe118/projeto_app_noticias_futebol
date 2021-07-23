@@ -32,7 +32,7 @@
             $stmt->bindValue(':autor', $this->__get('autor'));
             $stmt->bindValue(':fk_id_funcionario',$this->__get('fk_id_funcionario'));
        
-           $stmt->execute();
+           $stmt->execute(); 
 
             $stmt->rowCount();
            
