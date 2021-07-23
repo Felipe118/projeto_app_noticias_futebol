@@ -35,8 +35,8 @@
          $noticias->cadastrar();
 
 
-        
-        $this->renderNoticias('cadastra_noticias');
+        header('Location: /cadastrarNoticia?inserir=1');
+        //$this->renderNoticias('cadastra_noticias');
       
 } 
     public function teste(){

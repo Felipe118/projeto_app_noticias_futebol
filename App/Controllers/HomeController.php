@@ -9,7 +9,7 @@
    class HomeController extends Action{ 
     public function home(){
 
-        session_start();
+        session_start(); 
 
         if($_SESSION['autenticado'] == false){
           header('Location: /'); 
@@ -20,8 +20,8 @@
 
       session_start();
 
-      if($_SESSION['autenticado'] == false){
-        header('Location: /');
+      if($_SESSION['autenticado'] == false || $_SESSION['permissao'] == 'usu'){
+        header('Location: /?erro=autenticacao');
       }
       $this->renderHome('home_adm');
   }
