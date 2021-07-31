@@ -11,6 +11,7 @@ site, que ainda está em desenvolvimento.
  <h4 align="center"> 
 	🚧  ... Galo Notícias 🚀 Em construção...  🚧
 </h4>
+
  ## Features
 - [x]  Front-end
 - [x]  Sistema de Login
