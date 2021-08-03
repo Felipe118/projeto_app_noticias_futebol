@@ -6,15 +6,16 @@
     <table class="table">
         <thead>
         <tr>
-            <th style="width:80%">Numero</th>
+            <th style="width:80%">Titulo</th>
             <th style="width:20%">Ação</th>
         </tr>
         </thead>
         <tbody>
             <tbody>
-             
+             <?php foreach($this->view->noticias as $indice => $noticia){?>
                 <tr>
-                    <td> {{ $numero->numero }} </td>
+                    
+                    <td><?= $noticia['titulo'] ?> </td>
                     <td style="display:flex;">
                         <a href="/numeros/show/{{$numero->id}}"><button class="btn btn-primary">Editar</button></a>
                         <form action="/numeros/delete/{{$numero->id}}" method="POST" style="margin-left:15px">
@@ -23,6 +24,7 @@
                         </form>
                     </td>
                 <tr>
+                <?php } ?>
        
         </tbody>
     </table>

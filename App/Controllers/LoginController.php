@@ -16,7 +16,7 @@
 
             $funcionario = Container::getModel('Funcionario');
              
-
+ 
              $funcionario->__set('email',$_POST['email']);
              $funcionario->__set('senha',$_POST['senha']); 
              $funcionario->autenticar(); 

@@ -19,10 +19,21 @@
     } 
     
     public function alterar_index(){
+   
       $this->renderNoticias('alterar_noticias_adm');
     }
-    public function lista_noticias_adm(){
+    public function listar_noticias_adm(){
+      session_start();
+      $noticia = Container::getModel('Noticia');
+      
+
+      $noticia->__set('fk_id_funcionario',$_SESSION['id']);
+      $noticias = $noticia->listar();
+      //var_dump($_SESSION['id']);
+      $this->view->noticias = $noticias;
       $this->renderNoticias('listar_noticias_adm');
+
+
     }
     public function cadastrarNoticia(){
 

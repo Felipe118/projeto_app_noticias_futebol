@@ -10,6 +10,7 @@
         private $texto;
         private $imagem;
         private $autor;
+        private $fk_id_funcionario;
         //private $fk_id_funcionario;
  
   
@@ -34,15 +35,22 @@
        
            $stmt->execute(); 
 
-            $stmt->rowCount();
+            //$stmt->rowCount();
            
          
 
            return $this;
         
         }
-        static function listar(){
-            $query = "SELECT titulo,resumo,texto,imagem,autor from tb_noticias where id=?";
+
+       public function listar(){
+            $query = "SELECT id,titulo,resumo,texto,imagem,autor,fk_id_funcionario from tb_noticias where fk_id_funcionario = :fk_id_funcionario";
+            $stmt= $this->db->prepare($query);
+            $stmt->bindValue('fk_id_funcionario', $this->__get('fk_id_funcionario'));
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
 
           
