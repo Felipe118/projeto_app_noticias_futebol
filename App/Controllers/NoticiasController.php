@@ -15,9 +15,15 @@
         if($_SESSION['autenticado'] == false){
           header('Location: /'); 
         }
-        $this->renderNoticias('cadastra_noticias');
+        $this->renderNoticias('cadastra_noticias_adm');
     } 
-     
+    
+    public function alterar_index(){
+      $this->renderNoticias('alterar_noticias_adm');
+    }
+    public function lista_noticias_adm(){
+      $this->renderNoticias('listar_noticias_adm');
+    }
     public function cadastrarNoticia(){
 
       session_start();
@@ -31,11 +37,11 @@
        $noticias->__set('imagem', $_POST["imagem"]);
        $noticias->__set('autor', $_POST["autor"]);
        $noticias->__set('fk_id_funcionario', $_SESSION['id'] );
-       
+        
          $noticias->cadastrar();
+ 
 
-
-        header('Location: /cadastrarNoticia?inserir=1');
+        header('Location: /cadastra_noticias?inserido=sucesso');
         //$this->renderNoticias('cadastra_noticias');
       
 } 

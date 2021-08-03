@@ -40,9 +40,20 @@ class Route extends Bootstrap {
 			'action' => 'sair'
 		);
 		$routes['cadastrar'] = array(
-			'route' => '/cadastra_noticias',
+			'route' => '/cadastra_noticias_adm',
 			'controller' => 'NoticiasController',
 			'action' => 'cadastra_noticias'
+		);
+		
+		$routes['alterarIndex'] = array(
+			'route' => '/alterar_index',
+			'controller' => 'NoticiasController',
+			'action' => 'alterar_index'
+		);
+		$routes['listar_noticias'] = array(
+			'route' => '/listar_noticias_adm',
+			'controller' => 'NoticiasController',
+			'action' => 'listar_noticias_adm'
 		);
 		$routes['cadastrarNoticia'] = array(
 			'route' => '/cadastrarNoticia',

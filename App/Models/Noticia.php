@@ -41,6 +41,9 @@
            return $this;
         
         }
+        static function listar(){
+            $query = "SELECT titulo,resumo,texto,imagem,autor from tb_noticias where id=?";
+        }
 
           
         
