@@ -1,25 +1,24 @@
        <?php
-            $url = "http://$_SERVER[REQUEST_URI]";
-            $url = str_replace("http:///login?", "", $_SERVER["REQUEST_URI"]);
-            $url = str_replace("/login?", "", $_SERVER["REQUEST_URI"]);
-            if($url == 'login=erro'){
+        $url = "http://$_SERVER[REQUEST_URI]";
+        $url = str_replace("http:///login?", "", $_SERVER["REQUEST_URI"]);
+        $url = str_replace("/login?", "", $_SERVER["REQUEST_URI"]);
+        if ($url == 'login=erro') {
         ?>
-            <section class="notification">
-            <p class="text-danger">ERRO: usuário ou senha invalidos!</p>
-             </section>
-      
-        <?php } ?>
-        <section id="container-login"> 
+           <section class="notification">
+               <p class="text-danger">ERRO: usuário ou senha invalidos!</p>
+           </section>
 
-            <img class="logo-login" src="img/logo_galo.svg" alt="Logo Atletico Mineiro">
-            <form  method="POST" action="/autenticar">
-            <div id="caixa-form">
-                 <label>E-Mail: </label><input type="text" name="email"  id="email" required ><br>
-                 <label>Senha:</label>&nbsp;<input type="password" name="senha" id="senha" required>
-            </div>
-            <button class="btn-login"  >Entrar</button><br><br>
+       <?php } ?>
+       <section id="container-login">
 
-           
-        </form> 
-        </section>
-     
+           <img class="logo-login" src="img/logo_galo.svg" alt="Logo Atletico Mineiro">
+           <form method="POST" action="/autenticar">
+               <div id="caixa-form">
+                   <label>E-Mail: </label><input type="text" name="email" id="email" required><br>
+                   <label>Senha:</label>&nbsp;<input type="password" name="senha" id="senha" required>
+               </div>
+               <button class="btn-login">Entrar</button><br><br>
+
+
+           </form>
+       </section>
