@@ -19,7 +19,7 @@
  
              $funcionario->__set('email',$_POST['email']);
              $funcionario->__set('senha',$_POST['senha']); 
-             $funcionario->autenticar(); 
+             $funcionario->autenticar();  
 
              if($funcionario->__get('id') !='' && $funcionario->__get('nome') != '' && $funcionario->__get('permissao') == "usu"){
                  echo "Autenticado";
