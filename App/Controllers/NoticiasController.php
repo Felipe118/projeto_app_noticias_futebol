@@ -37,22 +37,26 @@
     }
     public function cadastrarNoticia(){
 
-      session_start();
+     // echo '<pre>';
+       // print_r($_POST);
+        //echo '</pre>';
+
+      //session_start();
         
-      $noticias = Container::getModel('Noticia');
+      //$noticias = Container::getModel('Noticia');
 
         
-       $noticias->__set('titulo', $_POST["titulo"]);
-       $noticias->__set('resumo', $_POST["resumo"]);
-       $noticias->__set('texto', $_POST["texto"]);
-       $noticias->__set('imagem', $_POST["imagem"]);
-       $noticias->__set('autor', $_POST["autor"]);
-       $noticias->__set('fk_id_funcionario', $_SESSION['id'] );
+      // $noticias->__set('titulo', $_POST["titulo"]);
+      // $noticias->__set('resumo', $_POST["resumo"]);
+      // $noticias->__set('texto', $_POST["texto"]);
+      // $noticias->__set('imagem', $_POST["imagem"]);
+      // $noticias->__set('autor', $_POST["autor"]);
+      // $noticias->__set('fk_id_funcionario', $_SESSION['id'] );
         
-         $noticias->cadastrar();
+         //$noticias->cadastrar();
  
 
-        header('Location: /cadastra_noticias?inserido=sucesso');
+       // header('Location: /cadastra_noticias?inserido=sucesso');
         //$this->renderNoticias('cadastra_noticias');
       
 } 

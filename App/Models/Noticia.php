@@ -7,7 +7,7 @@
         private $id;
         private $titulo;
         private $resumo;
-        private $texto;
+        private $texto; 
         private $imagem;
         private $autor;
         private $fk_id_funcionario;
