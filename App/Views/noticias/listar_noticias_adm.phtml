@@ -1,3 +1,11 @@
+
+<?php
+    use App\Models\Noticia;
+    echo '<pre>';
+        print_r($this->view->noticias );
+    echo '</pre>';
+    
+?>
 <section class="container">
 <div class="card-body p-0 col-md-8" style="margin:0 auto">
 <div style="float:right">
@@ -12,13 +20,14 @@
         </thead>
         <tbody>
             <tbody>
+                
              <?php foreach($this->view->noticias as $indice => $noticia){?>
                 <tr>
                     
                     <td><?= $noticia['titulo'] ?> </td>
                     <td style="display:flex;">
-                        <a href="/numeros/show/{{$numero->id}}"><button class="btn btn-primary">Editar</button></a>
-                        <form action="/numeros/delete/{{$numero->id}}" method="POST" style="margin-left:15px">
+                        <a href="#"><button class="btn btn-primary">Editar</button></a>
+                        <form action="#" method="POST" style="margin-left:15px">
                        
                         <button type="submit" class="btn btn-danger" style="float:right">Deletar</button>
                         </form>

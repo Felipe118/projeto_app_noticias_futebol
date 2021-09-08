@@ -9,6 +9,7 @@
    use MF\Model\Container;
   
    class NoticiasController extends Action{
+    
     public function cadastra_noticias(){
         session_start();
 
@@ -22,19 +23,21 @@
    
       $this->renderNoticias('alterar_noticias_adm');
     }
-    public function listar_noticias_adm(){
+
+    public function listarNoticias(){
       session_start();
       $noticia = Container::getModel('Noticia');
       
 
       $noticia->__set('fk_id_funcionario',$_SESSION['id']);
       $noticias = $noticia->listar();
-      //var_dump($_SESSION['id']);
+     // var_dump( $_SESSION['id']);
       $this->view->noticias = $noticias;
       $this->renderNoticias('listar_noticias_adm');
 
 
     }
+    
     public function cadastrarNoticia(){
 
      // echo '<pre>';
@@ -44,20 +47,19 @@
       session_start();
         
       $noticias = Container::getModel('Noticia');
-
+ 
         
-       $noticias->__set('titulo', $_POST["titulo"]);
+      $noticias->__set('titulo', $_POST["titulo"]);
       $noticias->__set('resumo', $_POST["resumo"]);
-       $noticias->__set('texto', $_POST["texto"]);
-       $noticias->__set('imagem', $_POST["imagem"]);
-      $noticias->__set('autor', $_POST["autor"]);
-      $noticias->__set('fk_id_funcionario', $_SESSION['id'] );
+      $noticias->__set('imagem', $_POST["imagem"]);
+      $noticias->__set('noticia', $_POST["texto"]);
+      $noticias->__set('fk_jornalista', $_SESSION['id'] );
         
-      $noticias->cadastrar();
+      $noticias->cadastrar(); 
  
 
        // header('Location: /cadastra_noticias?inserido=sucesso');
-        //$this->renderNoticias('cadastra_noticias');
+       $this->renderNoticias('cadastra_noticias');
       
 } 
     public function teste(){
