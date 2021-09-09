@@ -55,13 +55,13 @@
       $noticias->__set('titulo', $_POST["titulo"]);
       $noticias->__set('resumo', $_POST["resumo"]);
       $noticias->__set('imagem', $_POST["imagem"]);
-      $noticias->__set('noticia', $_POST["texto"]);
+      $noticias->__set('noticia', $_POST["noticia"]);
       $noticias->__set('fk_jornalista', $_SESSION['id'] );
         
       $noticias->cadastrar(); 
  
 
-       // header('Location: /cadastra_noticias?inserido=sucesso');
+        header('Location: /cadastra_noticias_adm');
        $this->renderNoticias('cadastra_noticias');
       
 } 
@@ -92,7 +92,7 @@
     public function alterarNoticia(){
       $noticia = Container::getModel('Noticia');
 
-      $noticias = $noticia->listar();
+      $noticias = $noticia->listarID();
       $this->view->noticias = $noticias;
       $noticia->__set('id',$_GET['id']);
       print_r($_GET);

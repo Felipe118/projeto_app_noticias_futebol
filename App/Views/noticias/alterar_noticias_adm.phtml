@@ -21,13 +21,15 @@
         <div class="row">
             <div class="d-flex justify-content-center ">
 
+            <?php foreach($this->view->noticias as $key => $noticias){?>
+
             <form method="POST" action="/alterarNoticia" class="col-12 ">
                     <h1 class="texto d-flex justify-content-center mt-4">Alterar notícias</h1><br>
                     <div id="forms" class="col-12 ">
                         <div class="mb-4 row col-6 mt-5 form-1">
                             <label for="titulo" class="col-sm-2 col-form-label">Titulo</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="titulo" id="titulo">
+                                <input type="text" class="form-control" value="" name="titulo" id="titulo">
                             </div>
                         </div>
                         <div class="mb-4 row col-6 mt-2 form-2">
@@ -51,6 +53,7 @@
                         <button id="botao" class="btn btn-warning btn-lg botao">Cadastrar</button>
                     </div>
                  </form>
+                 <?php } ?>
 
      
             </div>
