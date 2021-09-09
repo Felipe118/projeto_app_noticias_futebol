@@ -26,14 +26,17 @@
 
     public function listarNoticias(){
       session_start();
+
+      if($_SESSION['autenticado'] == false){
+        header('Location: /'); 
+      }
       $noticia = Container::getModel('Noticia');
       
 
       $noticia->__set('fk_id_funcionario',$_SESSION['id']);
       $noticias = $noticia->listar();
-     // var_dump( $_SESSION['id']);
       $this->view->noticias = $noticias;
-      $this->renderNoticias('listar_noticias_adm');
+      $this->renderList('listar_noticias_adm');
 
 
     }
@@ -83,5 +86,17 @@
       }catch(\PDOException $e){
         echo 'ERRO'.$e->getMessage();
       }
+    }
+
+
+    public function alterarNoticia(){
+      $noticia = Container::getModel('Noticia');
+
+      $noticias = $noticia->listar();
+      $this->view->noticias = $noticias;
+      $noticia->__set('id',$_GET['id']);
+      print_r($_GET);
+      $this->renderNoticias('alterar_noticias_adm');
+      
     }
 }

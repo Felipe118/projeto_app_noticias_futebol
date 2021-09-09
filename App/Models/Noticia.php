@@ -42,13 +42,30 @@
         }
 
        public function listar(){
-            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where fk_jornalista = :fk_jornalista";
+            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where fk_jornalista = fk_jornalista";
             $stmt= $this->db->prepare($query);
-            $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
+           // $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
 
             $stmt->execute();
 
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        }
+        public function listID(){
+            $query = "SELECT titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :fk_jornalista";
+            $stmt= $this->db->prepare($query);
+           // $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
+
+            $stmt->execute();
+
+            return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        }
+
+
+        public function edit(){
+            $query = "UPDATE noticias set :titulo,:resumo, :imagem, :noticia where id = :id";
+            $stmt= $this->db->prepare($query);
+            $stmt->execute();
+
         }
 
           

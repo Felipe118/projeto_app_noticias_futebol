@@ -1,16 +1,34 @@
 
-<?php
-    use App\Models\Noticia;
-    echo '<pre>';
-        print_r($this->view->noticias );
-    echo '</pre>';
+
+<section class="container-fluid col-12 marcador ">
+
+<header id="header">
+        <a href="#">
+            <img class="logo" src="../img/logo_galo.svg" alt="Logo Atletico Mineiro">
+        </a>
+        <nav id="navigation">
+            <ul>
+
+                <li><a href="/home_adm">Home</a></li>
+                <li><a href="#">Jogadores</a></li>
+                <li><a href="#">Titulos</a></li>
+                <li><a href="#">Destaques</a></li>
+
+            </ul>
+
+        </nav>
+        <a href="/sair" class="btn-entrar"> Sair</a>
+    </header>
+
     
-?>
-<section class="container">
+     
+
+           
+<div class="container-fluid col-12 margin mt-bottom-3">
 <div class="card-body p-0 col-md-8" style="margin:0 auto">
-<div style="float:right">
-    <a href="/listar_noticias_adm?acao=id"><button class="btn btn-success">Adicionar</button></a>
-</div>
+    <div style="float:right">
+        <a href="/listar_noticias_adm?acao=id"><button class="btn btn-success">Adicionar</button></a>
+    </div>
     <table class="table">
         <thead>
         <tr>
@@ -26,7 +44,7 @@
                     
                     <td><?= $noticia['titulo'] ?> </td>
                     <td style="display:flex;">
-                        <a href="#"><button class="btn btn-primary">Editar</button></a>
+                        <a href="/alterarNoticia?id=<?=$noticia['id'] ?>"><button class="btn btn-primary">Editar</button></a>
                         <form action="#" method="POST" style="margin-left:15px">
                        
                         <button type="submit" class="btn btn-danger" style="float:right">Deletar</button>
@@ -38,4 +56,12 @@
         </tbody>
     </table>
 </div>
+
+</div>
+
+
+<footer id="footer" class=" col-12">
+        <p class="text-footer"> &copy LOREM IPSUN DOLOR SIT AMET</p>
+    </footer>
+
 </section>

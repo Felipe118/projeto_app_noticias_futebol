@@ -21,7 +21,7 @@
         <div class="row">
             <div class="d-flex justify-content-center ">
 
-            <form method="POST" action="/" class="col-12 ">
+            <form method="POST" action="/alterarNoticia" class="col-12 ">
                     <h1 class="texto d-flex justify-content-center mt-4">Alterar notícias</h1><br>
                     <div id="forms" class="col-12 ">
                         <div class="mb-4 row col-6 mt-5 form-1">
@@ -42,15 +42,10 @@
                                 <input type="text" name="imagem" class="form-control" id="imagem">
                             </div>
                         </div>
-                        <div class="mb-4 row col-6 mt-5 form-1">
-                            <label for="autor" class="col-sm-2 col-form-label">Jornalista</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="autor" class="form-control" id="autor">
-                            </div>
-                        </div>
+                        
                         <div class="mb-3 col-6">
                             <label for="texto" class="form-label">Texto Notícia</label>
-                            <textarea class="form-control" name="texto" id="texto" rows="8"></textarea>
+                            <textarea class="form-control"  name="noticia" id="noticia" rows="8"></textarea>
                         </div>
 
                         <button id="botao" class="btn btn-warning btn-lg botao">Cadastrar</button>

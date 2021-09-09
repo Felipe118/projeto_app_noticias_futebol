@@ -5,7 +5,7 @@ namespace MF\Init;
 abstract class Bootstrap { 
 	private $routes;
 
-	abstract protected function initRoutes(); 
+	abstract protected function initRoutes();  
 
 	public function __construct() {
 		$this->initRoutes();

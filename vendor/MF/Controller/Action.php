@@ -49,7 +49,7 @@ abstract class Action {
 		}
 	} 
 
-	protected function renderList($view, $layout = 'layout_CadNoticias') {
+	protected function renderList($view, $layout = 'layout_listar') {
 		$this->view->page = $view; 
 
 		if(file_exists("../App/Views/".$layout.".phtml")) {

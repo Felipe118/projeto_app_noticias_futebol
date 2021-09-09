@@ -60,10 +60,10 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'cadastrarNoticia'
 		);
-		$routes['teste'] = array(
-			'route' => '/teste',
+		$routes['alterarNoticia'] = array(
+			'route' => '/alterarNoticia',
 			'controller' => 'NoticiasController',
-			'action' => 'teste'
+			'action' => 'alterarNoticia'
 		);
 		
 		 
