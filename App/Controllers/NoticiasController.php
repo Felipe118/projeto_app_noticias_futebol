@@ -43,10 +43,6 @@
     
     public function cadastrarNoticia(){
 
-     // echo '<pre>';
-       // print_r($_POST);
-        //echo '</pre>';
-
       session_start();
         
       $noticias = Container::getModel('Noticia');
@@ -68,9 +64,7 @@
     public function teste(){
       session_start();
       try{
-
-
-     
+ 
       $teste = Container::getModel('Teste');
     
        // $_POST['id'] = $_SESSION['id'];
@@ -90,13 +84,18 @@
 
 
     public function alterarNoticia(){
-      $noticia = Container::getModel('Noticia');
+     $noticia = Container::getModel('Noticia');
+     $id = (integer)$_GET['id'];
+      
+     $noticia->__set('id', $id);
 
-      $noticias = $noticia->listarID();
-      $this->view->noticias = $noticias;
-      $noticia->__set('id',$_GET['id']);
-      print_r($_GET);
-      $this->renderNoticias('alterar_noticias_adm');
+      $noticias_edit = $noticia->listID();
+      $this->view->noticiass = $noticias_edit;
+     
+ 
+     
+     
+      $this->renderEdit('alterar_noticias_adm');
       
     }
 }

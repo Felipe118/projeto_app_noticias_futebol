@@ -16,6 +16,7 @@
         public function __get($attr){
             return $this->$attr;
         }
+        
         public function __set($attr,$value){
             $this->$attr = $value;
         } 
@@ -51,14 +52,14 @@
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
         public function listID(){
-            $query = "SELECT titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :fk_jornalista";
+            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :id";
             $stmt= $this->db->prepare($query);
-           // $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
+            $stmt->bindValue(':id',$this->__get('id'));
 
             $stmt->execute();
 
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        }
+      }
 
 
         public function edit(){

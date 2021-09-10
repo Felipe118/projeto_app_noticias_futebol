@@ -58,6 +58,15 @@ abstract class Action {
 			$this->content();
 		}
 	} 
+	protected function renderEdit($view, $layout = 'layout_alterar') {
+		$this->view->page = $view; 
+
+		if(file_exists("../App/Views/".$layout.".phtml")) {
+			require_once "../App/Views/".$layout.".phtml";
+		} else {
+			$this->content();
+		}
+	} 
 	
 	
 
