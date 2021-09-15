@@ -65,6 +65,12 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'alterarNoticia'
 		);
+
+		$routes['editNoticia'] = array(
+			'route' => '/editNoticia',
+			'controller' => 'NoticiasController',
+			'action' => 'editNoticia'
+		);
 		
 		 
 

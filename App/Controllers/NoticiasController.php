@@ -84,18 +84,42 @@
 
 
     public function alterarNoticia(){
+     
+      
      $noticia = Container::getModel('Noticia');
      $id = (integer)$_GET['id'];
-      
+       
      $noticia->__set('id', $id);
 
       $noticias_edit = $noticia->listID();
-      $this->view->noticiass = $noticias_edit;
+      $this->view->noticiass = $noticias_edit; 
      
  
      
      
       $this->renderEdit('alterar_noticias_adm');
       
+    }
+
+    public function editNoticia(){
+      $noticias = Container::getModel('Noticia');
+      $id = (integer)$_GET['id'];
+       
+      $noticias->__set('id', $id);
+      $noticias->__set('titulo', $_POST["titulo"]);
+      $noticias->__set('resumo', $_POST["resumo"]);
+      $noticias->__set('imagem', $_POST["imagem"]);
+      $noticias->__set('noticia', $_POST["noticia"]);
+
+      $noticias->edit();
+      header('Location: /listar_noticias_adm?status=sucesso'); 
+
+     // $this->renderNoticias('listar_noticias_adm');
+    
+
+
+      echo '</pre>';
+      print_r($_POST);
+      echo '</pre>';
     }
 }

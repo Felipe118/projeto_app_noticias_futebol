@@ -63,9 +63,18 @@
 
 
         public function edit(){
-            $query = "UPDATE noticias set :titulo,:resumo, :imagem, :noticia where id = :id";
+            $query = "UPDATE noticias set titulo = :titulo, resumo = :resumo,imagem = :imagem, noticia = :noticia where id = :id";
             $stmt= $this->db->prepare($query);
+
+            $stmt->bindValue(':id',$this->__get('id'));
+            $stmt->bindValue(':titulo',$this->__get('titulo'));
+            $stmt->bindValue(':resumo',$this->__get('resumo'));
+            $stmt->bindValue(':imagem',$this->__get('imagem'));
+            $stmt->bindValue(':noticia',$this->__get('noticia'));
+            
             $stmt->execute();
+
+            return $this;
 
         }
 
