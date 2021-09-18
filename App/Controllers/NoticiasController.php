@@ -61,30 +61,34 @@
        $this->renderNoticias('cadastra_noticias');
       
 } 
-    public function teste(){
-      session_start();
-      try{
+    //public function teste(){
+     // session_start();
+     // try{
  
-      $teste = Container::getModel('Teste');
+     // $teste = Container::getModel('Teste');
     
        // $_POST['id'] = $_SESSION['id'];
        
-      $teste->__set('id', (integer)$_SESSION['id']);
-      var_dump($_SESSION['id']);
+     // $teste->__set('id', (integer)$_SESSION['id']);
+     // var_dump($_SESSION['id']);
     
-      $teste->__set('titulo', $_POST["titulo"]);
+     // $teste->__set('titulo', $_POST["titulo"]);
 
-      if($teste->teste()){
-        $this->renderNoticias('cadastra_noticias');
-      }
-      }catch(\PDOException $e){
-        echo 'ERRO'.$e->getMessage();
-      }
+      //if($teste->teste()){
+       // $this->renderNoticias('cadastra_noticias');
+     // }
+     // }catch(\PDOException $e){
+      //  echo 'ERRO'.$e->getMessage();
+     // }
+    //}
+
+
+    public function alterarNoticia(){ 
+     session_start();
+
+     if($_SESSION['autenticado'] == false){
+      header('Location: /'); 
     }
-
-
-    public function alterarNoticia(){
-     
       
      $noticia = Container::getModel('Noticia');
      $id = (integer)$_GET['id'];
@@ -117,9 +121,8 @@
      // $this->renderNoticias('listar_noticias_adm');
     
 
-
-      echo '</pre>';
-      print_r($_POST);
-      echo '</pre>';
     }
+
+    //-------------------------------------------------------------------------
+    
 }

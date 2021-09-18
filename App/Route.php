@@ -71,6 +71,9 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'editNoticia'
 		);
+
+		
+
 		
 		 
 
