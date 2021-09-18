@@ -2,8 +2,9 @@
 
     namespace App\Models;
     use MF\Model\Model;
+use PDOException;
 
-    class Noticia extends Model{
+class Noticia extends Model{
         private $id;
         private $titulo;
         private $resumo;
@@ -63,6 +64,8 @@
 
 
         public function edit(){
+
+            try{
             $query = "UPDATE noticias set titulo = :titulo, resumo = :resumo,imagem = :imagem, noticia = :noticia where id = :id";
             $stmt= $this->db->prepare($query);
 
@@ -73,6 +76,9 @@
             $stmt->bindValue(':noticia',$this->__get('noticia'));
             
             $stmt->execute();
+        }catch(PDOException $e){
+            echo 'ERRO:'. $e->getMessage();
+        }
 
             return $this;
 

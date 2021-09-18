@@ -1,5 +1,5 @@
 
-<section class="container-fluid col-12">
+<section class=" col-12">
     <header id="header">
         <a href="#">
             <img class="logo" src="../img/logo_galo.svg" alt="Logo Atletico Mineiro">
@@ -7,16 +7,17 @@
         <nav id="navigation">
             <ul>
 
-                <li><a href="/home_adm">Home</a></li>
-                <li><a href="#">Jogadores</a></li>
-                <li><a href="#">Titulos</a></li>
-                <li><a href="#">Destaques</a></li> 
+            <li><a href="/home_adm">Home</a></li>
+            <li><a href="/cadastra_noticias_adm">Cadastrar Notícias</a></li>
+            <li><a href="/listar_noticias_adm">Listar Notícias</a></li>
+
+            <li><a href="#">Gerenciar Jornalistas</a></li>
 
             </ul>
 
         </nav>
         <a href="/sair" class="btn-entrar"> Sair</a>
-    </header> 
+    </header>  
 
     <section class="container-fluid">
         <div class="row">
@@ -28,7 +29,7 @@
                     <h1 class="texto d-flex justify-content-center mt-4">Alterar notícias</h1><br>
                     <div id="forms" class="col-12 ">
                         <div class="mb-4 row col-6 mt-5 form-1">
-                            <label for="titulo" class="col-sm-2 col-form-label">Titulo</label>
+                            <label for="titulo" class="col-sm-2 col-form-label"><strong>Titulo</strong></label> 
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" value="<?= $noticias['titulo'] ?>" name="titulo" id="titulo">
                             </div>

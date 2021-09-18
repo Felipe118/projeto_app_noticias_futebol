@@ -62,6 +62,7 @@ body{
     height: 70px;
     display: flex;
    
+   
 }
 
 nav{
@@ -136,9 +137,7 @@ nav{
 /*FIM DO MENU*/
 
 /*INICIO DA SEÇÂO CADASTRAR NOTICIAS*/
-.marcador{
-    border: 1px solid red;
-}
+
 #forms{
    
     padding-left: 80px;
