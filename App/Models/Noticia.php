@@ -11,7 +11,7 @@ class Noticia extends Model{
         private $noticia; 
         private $imagem;
         private $fk_jornalista;
-        private $fk_id_funcionario;
+      
  
   
         public function __get($attr){
@@ -44,24 +44,24 @@ class Noticia extends Model{
         }
 
        public function listar(){
-            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where fk_jornalista = fk_jornalista";
+            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where :fk_jornalista = fk_jornalista";
             $stmt= $this->db->prepare($query);
-           // $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
+            $stmt->bindValue(':fk_jornalista',$this->__get('fk_jornalista'));
 
             $stmt->execute();
 
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
-        public function listID(){
-            $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :id";
-            $stmt= $this->db->prepare($query);
-            $stmt->bindValue(':id',$this->__get('id'));
+       // public function listID(){
+            //$query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :id";
+            //$stmt= $this->db->prepare($query);
+           // $stmt->bindValue(':id',$this->__get('id'));
 
-            $stmt->execute();
+            //$stmt->execute();
 
-            return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
-      }
-
+            //return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
+     // }
+  
 
         public function edit(){
 

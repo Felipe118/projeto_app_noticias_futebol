@@ -48,6 +48,15 @@ abstract class Action {
 			$this->content();
 		}
 	} 
+	protected function renderNoticiasJornalista($view, $layout = 'layout_CadNoticias') {
+		$this->view->page = $view; 
+
+		if(file_exists("../App/Views/".$layout.".phtml")) {
+			require_once "../App/Views/".$layout.".phtml";
+		} else {
+			$this->content();
+		}
+	} 
 
 	protected function renderList($view, $layout = 'layout_listar') {
 		$this->view->page = $view; 

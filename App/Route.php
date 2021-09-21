@@ -71,6 +71,17 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'editNoticia'
 		);
+		$routes['CadastrarJornalistaView'] = array(
+			'route' => '/CadNoticiaJornalista',
+			'controller' => 'NoticiasController',
+			'action' => 'CadastrarNoticiaJornalistaView'
+		);
+		$routes['CadastrarJornalista'] = array(
+			'route' => '/CadJornalista',
+			'controller' => 'NoticiasController',
+			'action' => 'CadastrarNoticiaJornalista'
+		);
+
 
 		
 

@@ -18,6 +18,14 @@
         }
         $this->renderNoticias('cadastra_noticias_adm');
     } 
+    public function CadastrarNoticiaJornalistaView(){
+      session_start();
+
+      if($_SESSION['autenticado'] == false){
+        header('Location: /'); 
+      }
+      $this->renderNoticiasJornalista('cadastra_noticias');
+    }
     
     public function alterar_index(){
    
@@ -32,8 +40,9 @@
       }
       $noticia = Container::getModel('Noticia');
       
-
-      $noticia->__set('fk_id_funcionario',$_SESSION['id']);
+      $fk_jornalista = (integer)$_SESSION['id'];
+      $noticia->__set('fk_jornalista',$fk_jornalista);
+    //  var_dump($_SESSION['id']);
       $noticias = $noticia->listar();
       $this->view->noticias = $noticias;
       $this->renderList('listar_noticias_adm');
@@ -61,6 +70,24 @@
        $this->renderNoticias('cadastra_noticias');
       
 } 
+  public function CadastrarNoticiaJornalista(){
+    session_start();
+        
+    $noticias = Container::getModel('Noticia');
+
+    
+    $noticias->__set('titulo', $_POST["titulo"]);
+    $noticias->__set('resumo', $_POST["resumo"]);
+    $noticias->__set('imagem', $_POST["imagem"]);
+    $noticias->__set('noticia', $_POST["noticia"]);
+    $noticias->__set('fk_jornalista', $_SESSION['id'] );
+    
+    $noticias->cadastrar(); 
+
+
+    header('Location: /CadNoticiaJornalista');
+   $this->renderNoticias('cadastra_noticias');
+}
     //public function teste(){
      // session_start();
      // try{
@@ -121,8 +148,8 @@
      // $this->renderNoticias('listar_noticias_adm');
     
 
-    }
+    } 
 
     //-------------------------------------------------------------------------
     
-}
+}  
