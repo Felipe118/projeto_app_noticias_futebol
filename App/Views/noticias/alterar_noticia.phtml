@@ -1,4 +1,3 @@
-
 <section class=" col-12">
     <header id="header">
         <a href="#">
@@ -7,9 +6,9 @@
         <nav id="navigation">
             <ul>
 
-            <li><a href="/home_adm">Home</a></li>
-            <li><a href="/cadastra_noticias_adm">Cadastrar Notícias</a></li>
-            <li><a href="/listar_noticias_adm">Listar Notícias</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/cadastra_noticias">Cadastrar Notícias</a></li>
+            <li><a href="/listar_noticias">Listar Notícias</a></li>
 
             <li><a href="#">Gerenciar Jornalistas</a></li>
 
@@ -23,7 +22,7 @@
         <div class="row">
             <div class="d-flex justify-content-center">
 
-            <?php foreach($this->view->noticiass as $key => $noticias){?>
+            <?php foreach($this->view->noticiasJornalista as $key => $noticias){?>
 
             <form method="POST" action="/EditNoticiaJornalista?id=<?=$noticias['id']?>" class="col-12 ">
                     <h1 class="texto d-flex justify-content-center mt-4">Alterar notícias</h1><br>

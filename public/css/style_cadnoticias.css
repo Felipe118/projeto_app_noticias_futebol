@@ -153,6 +153,9 @@ nav{
     color: white;
     height: 80px;
     text-align: center;
+    
+    bottom:0;
+   
 }
 .text-footer{
     font-size: 15px;
@@ -167,6 +170,10 @@ nav{
 
   .margin{
       margin: 160px;
+  }
+  #error{
+   
+    margin: 20px auto;
   }
 
 /* FIM CSS FOOTER*/

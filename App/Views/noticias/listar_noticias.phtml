@@ -1,5 +1,4 @@
-<section class="col-12 marcador ">
-
+<section class="col-12">
 <header id="header">
         <a href="#"> 
             <img class="logo" src="../img/logo_galo.svg" alt="Logo Atletico Mineiro">
@@ -8,7 +7,7 @@
             <ul>
             
             <li><a href="/home">Home</a></li>
-            <li><a href="/listar_noticias_adm">Listar Notícias</a></li>
+            <li><a href="/listar_noticias">Listar Notícias</a></li>
             <li><a href="#">Gerenciar Jornalistas</a></li>
  
             </ul>
@@ -17,10 +16,18 @@
         <a href="/sair" class="btn-entrar"> Sair</a>
     </header>
 
+<?php 
+if(isset($_GET['error']) == 'id'){
+?>
+    <div id="error" class="col-12  ">
+        <div class="alert alert-danger d-flex justify-content-center" role="alert">
+            Não é Possível acessar esse ID
+        </div>
+    </div>
+<?php } ?>
+   
     
      
-
-           
 <div class="container-fluid col-12 margin mt-bottom-3">
 <div class="card-body p-0 col-md-8" style="margin:0 auto">
     <div style="float:right">
@@ -41,9 +48,9 @@
                      
                     <td><?= $noticia['titulo'] ?> </td>
                     <td style="display:flex;">
-                        <a href="/EditNoticiaJornalista?id=<?=$noticia['id'] ?>"><button class="btn btn-primary">Editar</button></a>
+                        <a href="/alterarNoticiaJornalista?id=<?=$noticia['id'] ?>"><button class="btn btn-primary">Editar</button></a>
                         <form action="#" method="POST" style="margin-left:15px">
-                       
+
                         <button type="submit" class="btn btn-danger" style="float:right">Deletar</button>
                         </form>
                     </td>
@@ -57,8 +64,9 @@
 </div>
 
 
-<footer id="footer" class=" col-12">
+<footer id="footer" class="col-12 ">
         <p class="text-footer"> &copy LOREM IPSUN DOLOR SIT AMET</p>
-    </footer>
+</footer>
 
 </section>
+

@@ -133,6 +133,29 @@
       
     }
 
+    public function alterarNoticiaJornalista(){ 
+      session_start();
+ 
+      if($_SESSION['autenticado'] == false){ 
+       header('Location: /'); 
+     }
+       
+      $noticia = Container::getModel('Noticia');
+      $id = (integer)$_GET['id'];
+      $noticia->__set('id', $id);
+      $noticias_edit = $noticia->listID();
+
+      foreach($noticias_edit as $noticias){
+
+        if($noticias['fk_jornalista'] != $_SESSION['id']){
+          header('Location:listar_noticias?error=id ');
+        }
+      }
+      $this->view->noticiasJornalista = $noticias_edit; 
+      $this->renderEdit('alterar_noticia');
+       
+     }
+
     public function editNoticia(){
       $noticias = Container::getModel('Noticia');
       $id = (integer)$_GET['id'];

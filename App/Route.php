@@ -65,11 +65,22 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'alterarNoticia'
 		);
+		$routes['alterarNoticiaJornalista'] = array(
+			'route' => '/alterarNoticiaJornalista',
+			'controller' => 'NoticiasController',
+			'action' => 'alterarNoticiaJornalista'
+		);
 
 		$routes['editNoticia'] = array(
 			'route' => '/editNoticia',
 			'controller' => 'NoticiasController',
 			'action' => 'editNoticia'
+		);
+
+		$routes['editNoticiaJornalista'] = array(
+			'route' => '/EditNoticiaJornalista',
+			'controller' => 'NoticiasController',
+			'action' => 'EditNoticiaJornalista'
 		);
 		$routes['CadastrarJornalistaView'] = array(
 			'route' => '/CadNoticiaJornalista',
@@ -81,11 +92,7 @@ class Route extends Bootstrap {
 			'controller' => 'NoticiasController',
 			'action' => 'CadastrarNoticiaJornalista'
 		);
-		$routes['AlternarNoticiaJornalista'] = array(
-			'route' => '/EditNoticiaJornalista',
-			'controller' => 'NoticiasController',
-			'action' => 'EditNoticiaJornalista'
-		);
+		
 		$routes['listarNoticiaJornalista'] = array(
 			'route' => '/listar_noticias',
 			'controller' => 'NoticiasController',
