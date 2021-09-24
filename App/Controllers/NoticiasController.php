@@ -33,6 +33,7 @@
     }
 
     public function listarNoticias(){
+      
       session_start();
 
       if($_SESSION['autenticado'] == false){
@@ -46,6 +47,25 @@
       $noticias = $noticia->listar();
       $this->view->noticias = $noticias;
       $this->renderList('listar_noticias_adm');
+
+
+    }
+
+    public function listarNoticiasJornalista(){
+      
+      session_start();
+
+      if($_SESSION['autenticado'] == false){
+        header('Location: /'); 
+      }
+      $noticia = Container::getModel('Noticia');
+      
+      $fk_jornalista = (integer)$_SESSION['id'];
+      $noticia->__set('fk_jornalista',$fk_jornalista);
+    //  var_dump($_SESSION['id']);
+      $noticias = $noticia->listar();
+      $this->view->noticias = $noticias;
+      $this->renderList('listar_noticias');
 
 
     }
@@ -88,32 +108,13 @@
     header('Location: /CadNoticiaJornalista');
    $this->renderNoticias('cadastra_noticias');
 }
-    //public function teste(){
-     // session_start();
-     // try{
- 
-     // $teste = Container::getModel('Teste');
     
-       // $_POST['id'] = $_SESSION['id'];
-       
-     // $teste->__set('id', (integer)$_SESSION['id']);
-     // var_dump($_SESSION['id']);
-    
-     // $teste->__set('titulo', $_POST["titulo"]);
-
-      //if($teste->teste()){
-       // $this->renderNoticias('cadastra_noticias');
-     // }
-     // }catch(\PDOException $e){
-      //  echo 'ERRO'.$e->getMessage();
-     // }
-    //}
 
 
     public function alterarNoticia(){ 
      session_start();
 
-     if($_SESSION['autenticado'] == false){
+     if($_SESSION['autenticado'] == false){ 
       header('Location: /'); 
     }
       
@@ -143,12 +144,28 @@
       $noticias->__set('noticia', $_POST["noticia"]);
 
       $noticias->edit();
-      header('Location: /listar_noticias_adm?status=sucesso'); 
+      //header('Location: /listar_noticias_adm?status=sucesso'); 
 
-     // $this->renderNoticias('listar_noticias_adm');
+     $this->renderNoticias('listar_noticias_adm');
     
 
     } 
+
+    public function EditNoticiaJornalista(){
+      $noticias = Container::getModel('Noticia');
+      $id = (integer)$_GET['id'];
+       
+      $noticias->__set('id', $id);
+      $noticias->__set('titulo', $_POST["titulo"]);
+      $noticias->__set('resumo', $_POST["resumo"]);
+      $noticias->__set('imagem', $_POST["imagem"]);
+      $noticias->__set('noticia', $_POST["noticia"]);
+
+      $noticias->edit();
+      //header('Location: /listar_noticias_adm?status=sucesso'); 
+
+      $this->renderNoticias('listar_noticias');
+    }
 
     //-------------------------------------------------------------------------
     
