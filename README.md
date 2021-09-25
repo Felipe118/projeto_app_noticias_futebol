@@ -13,12 +13,12 @@ site, que ainda está em desenvolvimento.
 </h4>
 
  ## Features
-- [x]  Front-end
 - [x]  Sistema de Login
 - [x]  integrar ao banco de dados
+- [x]  Cadastrar,Alterar,Desativar Notícias
 - [ ]  Controle de Jornalistas
-- [ ]  Responsividade
-- [ ]  Cadastrar,Alterar,Desativar Notícias
+- [ ]  Responsividade de todas as páginas
+
 
 
 ## Tecnologias

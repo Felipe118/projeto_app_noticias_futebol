@@ -10,7 +10,7 @@
   
    class NoticiasController extends Action{
     
-    public function cadastra_noticias(){
+    public function cadastra_noticias(){ 
         session_start();
 
         if($_SESSION['autenticado'] == false){
