@@ -105,8 +105,8 @@
     $noticias->cadastrar(); 
 
 
-    header('Location: /CadNoticiaJornalista');
-   $this->renderNoticias('cadastra_noticias');
+    header('Location: /listar_noticias');
+   //$this->renderNoticias('listar_noticias');
 }
     
 
@@ -146,7 +146,7 @@
       $noticias_edit = $noticia->listID();
 
       foreach($noticias_edit as $noticias){
-
+ 
         if($noticias['fk_jornalista'] != $_SESSION['id']){
           header('Location:listar_noticias?error=id ');
         }
@@ -185,9 +185,24 @@
       $noticias->__set('noticia', $_POST["noticia"]);
 
       $noticias->edit();
-      //header('Location: /listar_noticias_adm?status=sucesso'); 
+      header('Location: /listar_noticias'); 
 
-      $this->renderNoticias('listar_noticias');
+      //$this->renderNoticias('listar_noticias');
+    }
+
+    public function delete(){
+      //print_r($_POST);
+      $noticias = Container::getModel('Noticia');
+
+      $id = (integer)$_POST['id'];
+      $noticias->__set('id',$id);
+      $noticias->delete();
+
+
+      header('Location: /listar_noticias?delete=sucesso'); 
+
+
+
     }
 
     //-------------------------------------------------------------------------

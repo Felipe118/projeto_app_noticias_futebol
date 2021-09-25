@@ -84,6 +84,15 @@ class Noticia extends Model{
 
         }
 
+        public function delete(){
+            $query = "DELETE FROM noticias where id = :id";
+            $stmt = $this->db->prepare($query);
+
+            $stmt->bindValue(':id', $this->__get('id'));
+
+            $stmt->execute();
+        }
+
           
         
         

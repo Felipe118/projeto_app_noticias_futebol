@@ -25,6 +25,17 @@ if(isset($_GET['error']) == 'id'){
         </div>
     </div>
 <?php } ?>
+
+
+<?php 
+if(isset($_GET['delete']) == 'sucesso'){
+?>
+    <div id="error" class="col-12  ">
+        <div class="alert alert-success d-flex justify-content-center" role="alert">
+           <h3>Matéria Deletada com sucesso!</h3>
+        </div>
+    </div>
+<?php } ?>
    
     
      
@@ -49,7 +60,9 @@ if(isset($_GET['error']) == 'id'){
                     <td><?= $noticia['titulo'] ?> </td>
                     <td style="display:flex;">
                         <a href="/alterarNoticiaJornalista?id=<?=$noticia['id'] ?>"><button class="btn btn-primary">Editar</button></a>
-                        <form action="#" method="POST" style="margin-left:15px">
+                       
+                        <form action="/delete" method="POST" style="margin-left:15px">
+                        <input type="hidden"  value="<?=$noticia['id'] ?>" name="id">
 
                         <button type="submit" class="btn btn-danger" style="float:right">Deletar</button>
                         </form>

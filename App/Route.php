@@ -99,6 +99,13 @@ class Route extends Bootstrap {
 			'action' => 'listarNoticiasJornalista'
 		);
 
+		$routes['delete'] = array(
+			'route' => '/delete',
+			'controller' => 'NoticiasController',
+			'action' => 'delete'
+		);
+
+
 
 		
 
