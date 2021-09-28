@@ -16,18 +16,24 @@
 
             <h1 class="title-home"> Nóticias do Clube Atletíco Mineiro</h1>
 
+                <?php
+
+                foreach($this->view->home as $indice => $value){
+                   
+                ?>
                 <article id="article" class="col-8 mt-5">
                     <div class="row">
-                        <div class="box">
-                            <a href="#"><img src="../img/img1.jpg" alt="Imagem do Escudo do galos" class="img img-fluid"></a>
+                        <div class="box-img img-fluid">
+                            <a href="#"><img src="../<?= $value['imagem'] ?>" alt="Imagem do Escudo do galos" class="img"></a>
                         </div>
                     </div>
                     
                     <div class="col-6  text-resume">
-                        <a href="" class="link-text"><p class="text ">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p></a>
+                        <a href="" class="link-text"><p class="text "><?= $value['resumo'] ?></p></a>
                     </div>
                         
             </article>
+            <?php } ?>
 
             
 

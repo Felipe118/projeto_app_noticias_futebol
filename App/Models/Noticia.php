@@ -52,6 +52,7 @@ class Noticia extends Model{
 
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
+        
         public function listID(){
             $query = "SELECT id,titulo,resumo,imagem,noticia,fk_jornalista from noticias where id = :id";
             $stmt= $this->db->prepare($query);
@@ -60,6 +61,14 @@ class Noticia extends Model{
             $stmt->execute();
 
             return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
+      }
+
+      public function listarHome(){
+          $query = "SELECT titulo,resumo,noticia,imagem,data_postagem FROM noticias";
+          $stmt= $this->db->prepare($query);
+          $stmt->execute();
+          
+          return  $stmt->fetchAll(\PDO::FETCH_ASSOC);
       }
   
 

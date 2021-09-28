@@ -17,10 +17,14 @@
        if($_SESSION['autenticado'] == false){
           header('Location: /'); 
         }
-        $this->renderHome('home');
-
-
+       
+        
         $noticia = Container::getModel('Noticia');
+
+        $listHome = $noticia->listarHome();
+        $this->view->home = $listHome;
+
+        $this->renderHome('home');
 
     }
     public function home_adm(){
