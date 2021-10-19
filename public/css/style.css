@@ -136,7 +136,7 @@ nav{
 /*FIM DO MENU*/
 #article{
     grid-area: article;
-    border: 4px solid yellow;
+   
     display: flex;
     flex-wrap:wrap;
     margin: 20px;
@@ -167,11 +167,17 @@ nav{
     -webkit-transition: all 1s ease-in-out;
     -webkit-transform: matrix(1.05, 0, 0, 1.05, 0, 0);
 }*/
-
+/*CSS PAGINA HOME NOTICIAS*/
 .img{
     width: 384px;
     height: 216px;
-    border: 2px solid darkcyan;
+   
+}
+.title-home{
+
+    padding: 20px;
+    
+    text-align: center;
 }
 .titulo{
     text-decoration: none;
@@ -179,14 +185,12 @@ nav{
    
 }
 .text-resume{
-    border: 4px solid firebrick;
+   
     margin-left: 20px;
 }
-.marcador{
-    border:5px solid hotpink;
-}
+
 .text{
-    border: 4px solid black;
+    
     padding: 20px;
     color: black;
     font-size: 20px;
@@ -196,6 +200,9 @@ nav{
 .link-text{
     text-decoration: none;
 
+}
+.text-resume > .link-text > .text:hover{
+    color:rgb(70, 70, 70);
 }
 .txt1{
      font-family: 'Open Sans', sans-serif;
