@@ -1,0 +1,298 @@
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header "
+                         "article article"
+                         "footer footer";
+    
+}
+/*Inicio do menu*/
+#header{
+    grid-area: header;
+    background-color:black;
+    height: 70px;
+    display: flex;
+   
+}
+
+nav{
+   
+    flex-grow: 1;
+}
+#navigation > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 10px;
+
+}
+#navigation > ul > li > a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 6px; 
+    transition: all .3s ease-in-out;
+   
+
+    
+}
+#navigation > ul > li > a:hover{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.btn-entrar{
+    
+    margin-top: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    line-height: 38px;
+    text-align: center;
+    border:2px solid white;
+ 
+}
+
+.btn-entrar > img{
+    transition: all .3s ease-in-out;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+}
+.btn-entrar:hover{
+    background-color: transparent;
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+}
+/*FIM DO MENU*/
+#article{
+    grid-area: article;
+   
+    display: flex;
+    flex-wrap:wrap;
+    margin: 20px;
+    padding: 25px;
+}
+
+/*.box{
+    box-shadow: 5px 5px 5px 5px  grey;
+    height:350px;
+    width: 320px;
+    display: flex;
+  
+   
+    margin: 30px;
+    margin-left:70px;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.box > a > img{
+    width: 320px;
+    height: 285px;
+    margin-top: 65px;
+}
+.box > a > img:hover{
+    transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -webkit-transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+}*/
+/*CSS PAGINA HOME NOTICIAS*/
+.img{
+    width: 384px;
+    height: 216px;
+   
+}
+.title-home{
+
+    padding: 20px;
+    
+    text-align: center;
+}
+.titulo{
+    text-decoration: none;
+    color: black;
+   
+}
+.text-resume{
+   
+    margin-left: 20px;
+}
+
+.text{
+    
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.link-text{
+    text-decoration: none;
+
+}
+.text-resume > .link-text > .text:hover{
+    color:rgb(70, 70, 70);
+}
+.txt1{
+     font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+   position: absolute;
+   text-align: center;
+ }
+
+
+.footer{
+    background-color: black;
+    color: white;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-footer{
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/*CSS DA PAGINA DE LOGIN*/
+#container-login{
+    padding: 20px;
+    color:white;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 300px;
+    height: 290px;
+    background-color:black;
+    margin: 0 auto;
+    margin-top: 170px;
+   
+}
+#container-login > h1{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+input{
+    border-radius: 3px;
+    margin: 5px;
+    margin-left: 15px;
+   
+    height: 30px;
+    
+}
+#caixa-form{
+    
+    margin-top: 50px;
+}
+label{
+    font-weight: bold;
+  
+    margin-left: 25px;
+ 
+  
+}
+.logo-login{
+    width: 60px;
+    height: 60px;
+    margin-left: 110px;
+}
+.btn-login{
+    width: 70px;
+    height: 37px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+.btn-login:hover{
+    background-color: rgb(218, 218, 55);
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.link-cadastro{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.link-cadastro:hover{
+   color: rgb(216, 216, 72);
+}
+.notification{
+  
+   
+    width: 250px;
+    height: 50px;
+   
+    position: absolute;
+    bottom: 480px;
+    left: 560px;
+
+}
+.text-danger{
+    color: red;
+    font-weight: bold;
+
+}
+
+
+/*FIM DO CSS DA PAGINA DE LOGIN*/
+
+/*INICIO DO CSS DA PAGINA DE Cadastra LOGIN*/
+.btn-cadastrar{
+    width: 90px;
+    height: 37px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.container-home{
+    width: 100%;
+    border: 1px solid forestgreen;
+  
+
+}

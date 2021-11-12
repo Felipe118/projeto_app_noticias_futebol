@@ -56,7 +56,7 @@ body{
     
 }
 /*Inicio do menu*/
-#header{
+.header{
     grid-area: header;
     background-color:black;
     height: 70px;
@@ -215,15 +215,14 @@ nav{
  }
 
 
-#footer{
+.footer{
     background-color: black;
     color: white;
     height: 80px;
     text-align: center;
-    position: relative;
-    bottom: 100%;
-  
-    border: 10px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-footer{
@@ -335,6 +334,11 @@ label{
     margin-left: 100px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1rem;
 }
+.container-home{
+    width: 100%;
+    border: 1px solid forestgreen;
+  
 
+}
